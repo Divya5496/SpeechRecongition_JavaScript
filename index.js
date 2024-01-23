@@ -1,5 +1,5 @@
-const text = document.querySelector('texts');
-
+const text = document.getElementsByClassName('texts');
+const output = document.getElementById('output')
 const start = document.getElementById('start');
 
 const stop = document.getElementById('stop');
@@ -20,7 +20,7 @@ start.addEventListener('click',()=>{
 })
 
 recognition.onresult=(e)=>{
-    text.innerText = e.results[0][0].transcript;
+    output.textContent += e.results[0][0].transcript;
     console.log(e);
 }
 
