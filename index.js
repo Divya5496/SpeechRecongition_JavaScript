@@ -20,7 +20,7 @@ start.addEventListener('click',()=>{
 })
 
 recognition.onresult=(e)=>{
-    text.textContent = e.results[0][0].transcript;
+    text.innerText = e.results[0][0].transcript;
     console.log(e);
 }
 
